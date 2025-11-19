@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gravity Explains</title>
+
+  <style>
+    /* ---- Space Background ---- */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      color: white;
+      background: url("https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1920&q=80")
+        no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* ---- Star Animation ---- */
+    .stars {
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      animation: twinkle 2s infinite ease-in-out;
+      opacity: 0.8;
+    }
+
+    @keyframes twinkle {
+      0% { opacity: 0.3; }
+      50% { opacity: 1; }
+      100% { opacity: 0.3; }
+    }
+
+    /* ---- Center Content ---- */
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 4rem;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      opacity: 0.8;
+      margin-bottom: 40px;
+    }
+
+    /* ---- Navigation ---- */
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      border-bottom: 2px solid white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Star Field Generator -->
+  <script>
+    for (let i = 0; i < 200; i++) {
+      let star = document.createElement("div");
+      star.className = "stars";
+      star.style.top = Math.random() * window.innerHeight + "px";
+      star.style.left = Math.random() * window.innerWidth + "px";
+      star.style.animationDelay = Math.random() * 2 + "s";
+      document.body.appendChild(star);
+    }
+  </script>
+
+  <nav>
+    <center>
+      <a href="#">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </center>
+  </nav>
+
+  <div class="content">
+    <h1>Gravity Explains</h1>
+    <p>Exploring the Universe, One Question at a Time</p>
+  </div>
+
+</body>
+</html>
