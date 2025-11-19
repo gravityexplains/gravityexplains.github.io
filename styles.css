@@ -1,0 +1,105 @@
+/* ---------------- GLOBAL STYLES ---------------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    background: black url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+/* Dark overlay to improve readability */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+/* ---------------- NAVBAR ---------------- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(6px);
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #00eaff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #d6f9ff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #00eaff;
+    text-shadow: 0 0 8px #00eaff;
+}
+
+/* ---------------- CONTENT AREA ---------------- */
+.content {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #00eaff;
+}
+
+h2 {
+    color: #7be7ff;
+    margin-top: 25px;
+}
+
+p, li {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* ---------------- BLOG LIST ---------------- */
+.blog-list .post {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-left: 4px solid #00eaff;
+    border-radius: 8px;
+}
+
+/* ---------------- PROJECTS ---------------- */
+.project {
+    margin-bottom: 25px;
+    padding: 18px;
+    background: rgba(255,255,255,0.05);
+    border-left: 4px solid #7be7ff;
+    border-radius: 8px;
+}
+
+/* ---------------- CONTACT ---------------- */
+strong {
+    color: #00eaff;
+}
