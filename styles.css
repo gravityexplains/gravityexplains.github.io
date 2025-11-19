@@ -5,7 +5,7 @@ body {
     font-family: "Poppins", sans-serif;
     color: white;
     background: black url('background2.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
+    
 }
 
 /* Dark overlay to improve readability */
