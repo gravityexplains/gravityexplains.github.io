@@ -4,7 +4,10 @@ body {
     padding: 0;
     font-family: "Poppins", sans-serif;
     color: white;
-   background-image: url('https://cdn.esahubble.org/archives/images/wallpaper2/heic1509a.jpg');
+  section {
+    /* no background for all sections */
+}
+
 
 }
 
