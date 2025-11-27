@@ -62,7 +62,7 @@ nav ul li a.active {
     margin: 80px auto;
     padding: 30px;
     background: rgba(0, 0, 0, 0.5);
-     text-align: center;   /* NEW — centers all text */
+    
 }
 
   
@@ -90,6 +90,7 @@ p, li {
     background: rgba(255,255,255,0.05);
     border-left: 4px solid #00eaff;
     border-radius: 8px;
+     text-align: center;   /* NEW — centers all text */
 }
 
 /* ---------------- PROJECTS ---------------- */
@@ -99,10 +100,12 @@ p, li {
     background: rgba(255,255,255,0.05);
     border-left: 4px solid #7be7ff;
     border-radius: 8px;
+     text-align: center;   /* NEW — centers all text */
 }
 
 /* ---------------- CONTACT ---------------- */
 strong {
     color: #00eaff;
+     text-align: center;   /* NEW — centers all text */
 }
 
