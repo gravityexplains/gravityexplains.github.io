@@ -61,7 +61,8 @@ nav ul li a.active {
     max-width: 900px;
     margin: 80px auto;
     padding: 30px;
-    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    text-align: center;  
     
 }
 
