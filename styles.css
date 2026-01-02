@@ -198,4 +198,166 @@ strong {
   top: 60%;
   background: #b23a2a;
 }
+/* ========================= */
+/* LARGE ORBITAL SOLAR SYSTEM */
+/* ========================= */
+
+.solar-visual {
+  flex: 1.3;
+  position: relative;
+  overflow: hidden;
+}
+
+/* SUN */
+.sun {
+  position: absolute;
+  right: -180px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 30%, #fff7c2, #ffb300, #ff6f00);
+  box-shadow: 0 0 160px rgba(255,170,0,0.9);
+}
+
+/* ORBITS */
+.orbit {
+  position: absolute;
+  right: -420px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 1px dashed rgba(255,255,255,0.18);
+}
+
+.o1 { width: 360px; height: 360px; }
+.o2 { width: 460px; height: 460px; }
+.o3 { width: 580px; height: 580px; }
+.o4 { width: 700px; height: 700px; }
+.o5 { width: 860px; height: 860px; }
+.o6 { width: 1020px; height: 1020px; }
+.o7 { width: 1180px; height: 1180px; }
+.o8 { width: 1340px; height: 1340px; }
+
+/* ASTEROID BELT */
+.asteroid-belt {
+  position: absolute;
+  right: -420px;
+  top: 50%;
+  width: 760px;
+  height: 760px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle,
+      rgba(255,255,255,0.25) 1px,
+      transparent 2px);
+  background-size: 12px 12px;
+  opacity: 0.35;
+}
+
+/* PLANET BASE */
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow:
+    inset -8px -8px 14px rgba(0,0,0,0.6),
+    0 0 20px rgba(0,0,0,0.6);
+}
+
+/* INNER PLANETS */
+.mercury {
+  width: 26px;
+  height: 26px;
+  right: 240px;
+  top: 36%;
+  background:
+    radial-gradient(circle at 30% 30%, #bbb, #777);
+}
+
+.venus {
+  width: 42px;
+  height: 42px;
+  right: 290px;
+  top: 56%;
+  background:
+    radial-gradient(circle at 30% 30%, #f0c27b, #b07c35);
+}
+
+.earth {
+  width: 46px;
+  height: 46px;
+  right: 360px;
+  top: 42%;
+  background:
+    radial-gradient(circle at 30% 30%, #4facfe, #0b3d91);
+}
+
+.mars {
+  width: 34px;
+  height: 34px;
+  right: 430px;
+  top: 62%;
+  background:
+    radial-gradient(circle at 30% 30%, #e07b53, #8b2e1c);
+}
+
+/* GAS GIANTS */
+.jupiter {
+  width: 90px;
+  height: 90px;
+  right: 520px;
+  top: 38%;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      #c58b59,
+      #c58b59 8px,
+      #a86f3c 8px,
+      #a86f3c 16px
+    );
+}
+
+.saturn {
+  width: 82px;
+  height: 82px;
+  right: 610px;
+  top: 58%;
+  background:
+    radial-gradient(circle at 30% 30%, #e6c28b, #b89a63);
+}
+
+.saturn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 40px;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  border-radius: 50%;
+  border: 2px solid rgba(220,200,160,0.6);
+}
+
+/* ICE GIANTS */
+.uranus {
+  width: 60px;
+  height: 60px;
+  right: 720px;
+  top: 40%;
+  background:
+    radial-gradient(circle at 30% 30%, #9be7e8, #4ca1af);
+}
+
+.neptune {
+  width: 58px;
+  height: 58px;
+  right: 820px;
+  top: 64%;
+  background:
+    radial-gradient(circle at 30% 30%, #4b6cb7, #182848);
+}
+
 
