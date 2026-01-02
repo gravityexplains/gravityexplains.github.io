@@ -62,3 +62,69 @@
     font-size: 0.9rem;
     opacity: 0.6;
 }
+/* ============================= */
+/* SOLAR SYSTEM DIAGRAM LAYOUT   */
+/* ============================= */
+
+.solar-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.solar-text {
+  width: 60%;
+}
+
+/* Diagram container */
+.solar-diagram {
+  width: 40%;
+  position: relative;
+  height: 500px;
+}
+
+/* Sun */
+.sun {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #ffd700, #ff8c00);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  box-shadow: 0 0 40px rgba(255, 200, 0, 0.8);
+}
+
+/* Planets */
+.planet {
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Individual planets */
+.mercury { width: 8px; height: 8px; background: gray; left: 120px; }
+.venus   { width: 14px; height: 14px; background: #d4af37; left: 150px; }
+.earth   { width: 14px; height: 14px; background: #1e90ff; left: 180px; }
+.mars    { width: 10px; height: 10px; background: #c1440e; left: 210px; }
+
+.jupiter { width: 30px; height: 30px; background: #d2b48c; left: 260px; }
+.saturn  { width: 26px; height: 26px; background: #deb887; left: 320px; }
+.uranus  { width: 20px; height: 20px; background: #7fffd4; left: 370px; }
+.neptune { width: 20px; height: 20px; background: #4169e1; left: 420px; }
+@media (max-width: 900px) {
+  .solar-layout {
+    flex-direction: column;
+  }
+
+  .solar-text,
+  .solar-diagram {
+    width: 100%;
+  }
+
+  .solar-diagram {
+    height: 300px;
+  }
+}
