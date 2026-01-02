@@ -110,8 +110,9 @@ strong {
     color: #00eaff;
      
 }
+
 /* ============================= */
-/* ORBITAL SOLAR LAYOUT          */
+/* ORBITAL SOLAR SYSTEM LAYOUT   */
 /* ============================= */
 
 .solar-layout {
@@ -125,96 +126,9 @@ strong {
   flex: 1.2;
 }
 
-/* RIGHT SIDE VISUAL */
-.solar-visual {
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-}
-
-/* SUN (partially off-screen) */
-.sun {
-  position: absolute;
-  right: -120px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #fff2a8, #ffb300, #ff6f00);
-  box-shadow: 0 0 120px rgba(255, 180, 0, 0.8);
-}
-
-/* ORBITS (curved arcs) */
-.orbit {
-  position: absolute;
-  right: -420px;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  border: 1.6px dashed rgba(180,220,255,0.45);
-  box-shadow: 0 0 18px rgba(120,180,255,0.25);
-  pointer-events: none;
-}
-
-
-.o1 { width: 300px; height: 300px; }
-.o2 { width: 420px; height: 420px; }
-.o3 { width: 560px; height: 560px; }
-.o4 { width: 700px; height: 700px; }
-
-/* PLANETS */
-.planet {
-  position: absolute;
-  border-radius: 50%;
-  box-shadow: inset -4px -4px 8px rgba(0,0,0,0.4);
-}
-
-/* NOT ALIGNED — each has its own position */
-
-.mercury {
-  width: 18px;
-  height: 18px;
-  right: 180px;
-  top: 38%;
-  background: #aaa;
-}
-
-.venus {
-  width: 28px;
-  height: 28px;
-  right: 220px;
-  top: 55%;
-  background: #c98c4b;
-}
-
-.earth {
-  width: 46px;
-  height: 46px;
-  right: 360px;
-  top: 42%;
-  background:
-    radial-gradient(circle at 30% 30%,
-      #7dd3fc 20%,
-      #22c55e 35%,
-      #2563eb 55%,
-      #0b3d91 75%);
-  box-shadow:
-    inset -6px -6px 12px rgba(0,0,0,0.6),
-    0 0 22px rgba(80,160,255,0.6);
-}
-
-
-.mars {
-  width: 22px;
-  height: 22px;
-  right: 360px;
-  top: 60%;
-  background: #b23a2a;
-}
-/* ========================= */
-/* LARGE ORBITAL SOLAR SYSTEM */
-/* ========================= */
+/* ============================= */
+/* RIGHT SIDE VISUAL             */
+/* ============================= */
 
 .solar-visual {
   flex: 1.3;
@@ -222,7 +136,10 @@ strong {
   overflow: hidden;
 }
 
-/* SUN */
+/* ============================= */
+/* SUN                           */
+/* ============================= */
+
 .sun {
   position: absolute;
   right: -180px;
@@ -234,16 +151,23 @@ strong {
   background:
     radial-gradient(circle at 30% 30%, #fff7c2, #ffb300, #ff6f00);
   box-shadow: 0 0 160px rgba(255,170,0,0.9);
+  z-index: 5;
 }
 
-/* ORBITS */
+/* ============================= */
+/* ORBITS                        */
+/* ============================= */
+
 .orbit {
   position: absolute;
   right: -420px;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
-  border: 1px dashed rgba(255,255,255,0.18);
+  border: 1.4px dashed rgba(180,220,255,0.45);
+  box-shadow: 0 0 18px rgba(120,180,255,0.25);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .o1 { width: 360px; height: 360px; }
@@ -255,7 +179,10 @@ strong {
 .o7 { width: 1180px; height: 1180px; }
 .o8 { width: 1340px; height: 1340px; }
 
-/* ASTEROID BELT */
+/* ============================= */
+/* ASTEROID BELT                 */
+/* ============================= */
+
 .asteroid-belt {
   position: absolute;
   right: -420px;
@@ -266,22 +193,30 @@ strong {
   border-radius: 50%;
   background:
     radial-gradient(circle,
-      rgba(255,255,255,0.25) 1px,
+      rgba(255,255,255,0.55) 1px,
       transparent 2px);
-  background-size: 12px 12px;
-  opacity: 0.35;
+  background-size: 10px 10px;
+  opacity: 0.55;
+  z-index: 2;
 }
 
-/* PLANET BASE */
+/* ============================= */
+/* PLANET BASE                   */
+/* ============================= */
+
 .planet {
   position: absolute;
   border-radius: 50%;
   box-shadow:
     inset -8px -8px 14px rgba(0,0,0,0.6),
-    0 0 20px rgba(0,0,0,0.6);
+    0 0 22px rgba(0,0,0,0.6);
+  z-index: 4;
 }
 
-/* INNER PLANETS */
+/* ============================= */
+/* INNER PLANETS                 */
+/* ============================= */
+
 .mercury {
   width: 26px;
   height: 26px;
@@ -306,7 +241,14 @@ strong {
   right: 360px;
   top: 42%;
   background:
-    radial-gradient(circle at 30% 30%, #4facfe, #0b3d91);
+    radial-gradient(circle at 30% 30%,
+      #7dd3fc 20%,
+      #22c55e 35%,
+      #2563eb 55%,
+      #0b3d91 75%);
+  box-shadow:
+    inset -6px -6px 12px rgba(0,0,0,0.6),
+    0 0 22px rgba(80,160,255,0.6);
 }
 
 .mars {
@@ -318,7 +260,10 @@ strong {
     radial-gradient(circle at 30% 30%, #e07b53, #8b2e1c);
 }
 
-/* GAS GIANTS */
+/* ============================= */
+/* GAS GIANTS                    */
+/* ============================= */
+
 .jupiter {
   width: 90px;
   height: 90px;
@@ -355,7 +300,10 @@ strong {
   border: 2px solid rgba(220,200,160,0.6);
 }
 
-/* ICE GIANTS */
+/* ============================= */
+/* ICE GIANTS                    */
+/* ============================= */
+
 .uranus {
   width: 60px;
   height: 60px;
@@ -374,19 +322,4 @@ strong {
     radial-gradient(circle at 30% 30%, #4b6cb7, #182848);
 }
 
-.asteroid-belt {
-  position: absolute;
-  right: -420px;
-  top: 50%;
-  width: 760px;
-  height: 760px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background:
-    radial-gradient(circle,
-      rgba(255,255,255,0.55) 1px,
-      transparent 2px);
-  background-size: 10px 10px;
-  opacity: 0.55;
-}
 
