@@ -186,7 +186,7 @@ strong {
 
 .asteroid-belt {
   position: absolute;
-  right: -420px;
+  right: -120px; /* SAME AS ORBITS */
   top: 50%;
   width: 760px;
   height: 760px;
@@ -194,12 +194,13 @@ strong {
   border-radius: 50%;
   background:
     radial-gradient(circle,
-      rgba(255,255,255,0.55) 1px,
+      rgba(255,255,255,0.6) 1px,
       transparent 2px);
   background-size: 10px 10px;
-  opacity: 0.55;
-  z-index: 2;
+  opacity: 0.6;
+  z-index: 3;
 }
+
 
 /* ============================= */
 /* PLANET BASE                   */
