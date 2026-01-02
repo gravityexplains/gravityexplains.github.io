@@ -180,27 +180,6 @@ strong {
 .o7 { width: 1180px; height: 1180px; }
 .o8 { width: 1340px; height: 1340px; }
 
-/* ============================= */
-/* ASTEROID BELT                 */
-/* ============================= */
-
-.asteroid-belt {
-  position: absolute;
-  right: -120px; /* SAME AS ORBITS */
-  top: 50%;
-  width: 760px;
-  height: 760px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background:
-    radial-gradient(circle,
-      rgba(255,255,255,0.6) 1px,
-      transparent 2px);
-  background-size: 10px 10px;
-  opacity: 0.6;
-  z-index: 3;
-}
-
 
 /* ============================= */
 /* PLANET BASE                   */
