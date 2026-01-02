@@ -109,121 +109,92 @@ strong {
      
 }
 /* ============================= */
-/* SOLAR SYSTEM DIAGRAM – LARGE  */
+/* ORBITAL SOLAR LAYOUT          */
 /* ============================= */
 
 .solar-layout {
   display: flex;
-  gap: 60px;
-  align-items: center;
+  min-height: 100vh;
+  padding: 80px;
+  gap: 40px;
 }
 
 .solar-text {
-  flex: 1.1;
+  flex: 1.2;
 }
 
-.solar-diagram {
+/* RIGHT SIDE VISUAL */
+.solar-visual {
   flex: 1;
   position: relative;
-  height: 520px;
+  overflow: hidden;
 }
 
-/* Sun */
+/* SUN (partially off-screen) */
 .sun {
   position: absolute;
+  right: -120px;
   top: 50%;
-  left: 0;
   transform: translateY(-50%);
-  width: 140px;
-  height: 140px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #fff3a0, #ffb300, #ff6f00);
-  box-shadow: 0 0 80px rgba(255, 170, 0, 0.9);
+  background: radial-gradient(circle, #fff2a8, #ffb300, #ff6f00);
+  box-shadow: 0 0 120px rgba(255, 180, 0, 0.8);
 }
 
-/* Base planet style */
+/* ORBITS (curved arcs) */
+.orbit {
+  position: absolute;
+  right: -350px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.o1 { width: 300px; height: 300px; }
+.o2 { width: 420px; height: 420px; }
+.o3 { width: 560px; height: 560px; }
+.o4 { width: 700px; height: 700px; }
+
+/* PLANETS */
 .planet {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   border-radius: 50%;
-  box-shadow: inset -6px -6px 12px rgba(0,0,0,0.4),
-              inset 6px 6px 12px rgba(255,255,255,0.1);
+  box-shadow: inset -4px -4px 8px rgba(0,0,0,0.4);
 }
 
-/* Individual planets (bigger + textured) */
+/* NOT ALIGNED — each has its own position */
 
 .mercury {
-  width: 28px;
-  height: 28px;
-  left: 180px;
-  background: radial-gradient(circle, #bbb, #777);
+  width: 18px;
+  height: 18px;
+  right: 180px;
+  top: 38%;
+  background: #aaa;
 }
 
 .venus {
-  width: 42px;
-  height: 42px;
-  left: 230px;
-  background: radial-gradient(circle, #e0b070, #b87333);
+  width: 28px;
+  height: 28px;
+  right: 220px;
+  top: 55%;
+  background: #c98c4b;
 }
 
 .earth {
-  width: 48px;
-  height: 48px;
-  left: 300px;
-  background: radial-gradient(circle at 30% 30%, #4fa3ff, #1e3c72);
+  width: 30px;
+  height: 30px;
+  right: 300px;
+  top: 42%;
+  background: radial-gradient(circle, #4fa3ff, #1e3c72);
 }
 
 .mars {
-  width: 36px;
-  height: 36px;
-  left: 370px;
-  background: radial-gradient(circle, #ff8c66, #a12a1a);
-}
-
-.jupiter {
-  width: 90px;
-  height: 90px;
-  left: 460px;
-  background: linear-gradient(
-    to bottom,
-    #d2b48c,
-    #c19a6b,
-    #b68d60,
-    #d2b48c
-  );
-}
-
-.saturn {
-  width: 80px;
-  height: 80px;
-  left: 580px;
-  background: radial-gradient(circle, #e6d3a3, #c9b27c);
-}
-
-/* Saturn rings */
-.saturn::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -18px;
-  width: 116px;
-  height: 28px;
-  border-radius: 50%;
-  border: 3px solid rgba(220, 200, 150, 0.7);
-  transform: translateY(-50%) rotate(-12deg);
-}
-
-.uranus {
-  width: 60px;
-  height: 60px;
-  left: 700px;
-  background: radial-gradient(circle, #9fffe5, #3fbfbf);
-}
-
-.neptune {
-  width: 60px;
-  height: 60px;
-  left: 790px;
-  background: radial-gradient(circle, #5f7cff, #1b2a6f);
+  width: 22px;
+  height: 22px;
+  right: 360px;
+  top: 60%;
+  background: #b23a2a;
 }
