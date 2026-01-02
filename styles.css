@@ -151,25 +151,28 @@ strong {
   background:
     radial-gradient(circle at 30% 30%, #fff7c2, #ffb300, #ff6f00);
   box-shadow: 0 0 160px rgba(255,170,0,0.9);
-  z-index: 5;
+  z-index: 10;
 }
 
 /* ============================= */
 /* ORBITS                        */
 /* ============================= */
-
 .orbit {
   position: absolute;
-  right: -120px; /* WAS -420px */
+  right: -120px;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
-  border: 2px dashed rgba(180,220,255,0.6);
-  box-shadow: 0 0 30px rgba(120,180,255,0.4);
+
+  /* VISIBILITY */
+  border: 4px solid rgba(120,200,255,0.7);
+  box-shadow:
+    0 0 25px rgba(120,200,255,0.8),
+    inset 0 0 25px rgba(120,200,255,0.6);
+
   pointer-events: none;
   z-index: 2;
 }
-
 
 .o1 { width: 360px; height: 360px; }
 .o2 { width: 460px; height: 460px; }
@@ -179,6 +182,7 @@ strong {
 .o6 { width: 1020px; height: 1020px; }
 .o7 { width: 1180px; height: 1180px; }
 .o8 { width: 1340px; height: 1340px; }
+
 
 
 /* ============================= */
@@ -191,7 +195,7 @@ strong {
   box-shadow:
     inset -8px -8px 14px rgba(0,0,0,0.6),
     0 0 22px rgba(0,0,0,0.6);
-  z-index: 4;
+  z-index: 5;
 }
 
 /* ============================= */
