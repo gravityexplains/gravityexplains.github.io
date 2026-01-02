@@ -146,12 +146,15 @@ strong {
 /* ORBITS (curved arcs) */
 .orbit {
   position: absolute;
-  right: -350px;
+  right: -420px;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1.6px dashed rgba(180,220,255,0.45);
+  box-shadow: 0 0 18px rgba(120,180,255,0.25);
+  pointer-events: none;
 }
+
 
 .o1 { width: 300px; height: 300px; }
 .o2 { width: 420px; height: 420px; }
