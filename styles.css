@@ -184,12 +184,21 @@ strong {
 }
 
 .earth {
-  width: 30px;
-  height: 30px;
-  right: 300px;
+  width: 46px;
+  height: 46px;
+  right: 360px;
   top: 42%;
-  background: radial-gradient(circle, #4fa3ff, #1e3c72);
+  background:
+    radial-gradient(circle at 30% 30%,
+      #7dd3fc 20%,
+      #22c55e 35%,
+      #2563eb 55%,
+      #0b3d91 75%);
+  box-shadow:
+    inset -6px -6px 12px rgba(0,0,0,0.6),
+    0 0 22px rgba(80,160,255,0.6);
 }
+
 
 .mars {
   width: 22px;
