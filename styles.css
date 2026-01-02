@@ -372,4 +372,19 @@ strong {
     radial-gradient(circle at 30% 30%, #4b6cb7, #182848);
 }
 
+.asteroid-belt {
+  position: absolute;
+  right: -420px;
+  top: 50%;
+  width: 760px;
+  height: 760px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle,
+      rgba(255,255,255,0.55) 1px,
+      transparent 2px);
+  background-size: 10px 10px;
+  opacity: 0.55;
+}
 
