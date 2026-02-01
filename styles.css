@@ -324,4 +324,15 @@ strong {
     radial-gradient(circle at 30% 30%, #4b6cb7, #182848);
 }
 
+/* ORBIT BASE STYLE */
+.orbit {
+  position: absolute;
+  right: -420px;          /* Sun focus */
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 1.5px dashed rgba(255,255,255,0.65);
+  pointer-events: none;
+  opacity: 0.8;
+}
 
