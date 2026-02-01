@@ -177,11 +177,11 @@ strong {
 .planet {
   position: absolute;
   border-radius: 50%;
+  background-blend-mode: overlay, multiply, normal;
   box-shadow:
-    inset -8px -8px 14px rgba(0,0,0,0.6),
-    0 0 22px rgba(0,0,0,0.6);
-  z-index: 10001;
-    position: absolute;
+    inset -10px -10px 18px rgba(0,0,0,0.75),
+    inset 6px 6px 12px rgba(255,255,255,0.08),
+    0 0 28px rgba(0,0,0,0.65);
 }
 
 /* ============================= */
@@ -189,107 +189,93 @@ strong {
 /* ============================= */
 
 .mercury {
-  width: 26px;
-  height: 26px;
-  right: 240px;
-  top: 36%;
   background:
-    radial-gradient(circle at 30% 30%, #bbb, #777);
+    radial-gradient(circle at 35% 30%, #e0e0e0 0%, #9a9a9a 45%, #5e5e5e 75%),
+    repeating-radial-gradient(circle, rgba(0,0,0,0.15) 0 2px, transparent 2px 4px);
 }
 
+
 .venus {
-  width: 42px;
-  height: 42px;
-  right: 290px;
-  top: 56%;
   background:
-    radial-gradient(circle at 30% 30%, #f0c27b, #b07c35);
+    radial-gradient(circle at 30% 30%, #fff1c1 0%, #e6b86b 45%, #9c6b2c 75%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.08) 6px,
+      transparent 6px,
+      transparent 12px
+    );
 }
 
 .earth {
-  width: 46px;
-  height: 46px;
-  right: 360px;
-  top: 42%;
   background:
-    radial-gradient(circle at 30% 30%,
-      #7dd3fc 20%,
-      #22c55e 35%,
-      #2563eb 55%,
-      #0b3d91 75%);
-  box-shadow:
-    inset -6px -6px 12px rgba(0,0,0,0.6),
-    0 0 22px rgba(80,160,255,0.6);
+    radial-gradient(circle at 30% 30%, #b3ecff 0%, #1e90ff 45%, #0b3d91 75%),
+    radial-gradient(circle at 55% 50%, rgba(34,197,94,0.8) 0%, transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(34,197,94,0.6) 0%, transparent 35%),
+    repeating-linear-gradient(
+      -30deg,
+      rgba(255,255,255,0.12),
+      rgba(255,255,255,0.12) 5px,
+      transparent 5px,
+      transparent 12px
+    );
 }
 
 .mars {
-  width: 34px;
-  height: 34px;
-  right: 430px;
-  top: 62%;
   background:
-    radial-gradient(circle at 30% 30%, #e07b53, #8b2e1c);
+    radial-gradient(circle at 30% 30%, #ffb199 0%, #c1440e 50%, #6b1f0e 80%),
+    repeating-radial-gradient(circle, rgba(0,0,0,0.15) 0 2px, transparent 2px 5px);
 }
+
 
 /* ============================= */
 /* GAS GIANTS                    */
 /* ============================= */
 
 .jupiter {
-  width: 90px;
-  height: 90px;
-  right: 520px;
-  top: 38%;
   background:
+    radial-gradient(circle at 30% 30%, #ffd7a3 0%, #c58b59 45%, #7a4a24 80%),
     repeating-linear-gradient(
       0deg,
-      #c58b59,
-      #c58b59 8px,
-      #a86f3c 8px,
-      #a86f3c 16px
+      rgba(255,255,255,0.18) 0 8px,
+      rgba(0,0,0,0.12) 8px 16px
     );
 }
 
+
 .saturn {
-  width: 82px;
-  height: 82px;
-  right: 610px;
-  top: 58%;
   background:
-    radial-gradient(circle at 30% 30%, #e6c28b, #b89a63);
+    radial-gradient(circle at 30% 30%, #fff2cc 0%, #d6b47c 50%, #9e7f47 80%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.12),
+      rgba(255,255,255,0.12) 6px,
+      transparent 6px,
+      transparent 14px
+    );
 }
 
-.saturn::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 140px;
-  height: 40px;
-  transform: translate(-50%, -50%) rotate(-15deg);
-  border-radius: 50%;
-  border: 2px solid rgba(220,200,160,0.6);
-}
 
 /* ============================= */
 /* ICE GIANTS                    */
 /* ============================= */
 
 .uranus {
-  width: 60px;
-  height: 60px;
-  right: 720px;
-  top: 40%;
   background:
-    radial-gradient(circle at 30% 30%, #9be7e8, #4ca1af);
+    radial-gradient(circle at 30% 30%, #d6ffff 0%, #7fdde0 50%, #3a8ca1 80%);
 }
 
+
 .neptune {
-  width: 58px;
-  height: 58px;
-  right: 820px;
-  top: 64%;
   background:
-    radial-gradient(circle at 30% 30%, #4b6cb7, #182848);
+    radial-gradient(circle at 30% 30%, #8ab4ff 0%, #304ffe 45%, #0b1a4a 80%),
+    repeating-linear-gradient(
+      -20deg,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.08) 6px,
+      transparent 6px,
+      transparent 14px
+    );
 }
+
 
