@@ -277,5 +277,10 @@ strong {
       transparent 14px
     );
 }
+.planet {
+  background-color: gray !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
 
 
