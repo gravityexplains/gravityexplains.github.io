@@ -147,25 +147,23 @@ strong {
 }
 
 
+
 /* ============================= */
 /* SUN                           */
 /* ============================= */
 
-.solar-visual {
-  position: relative;
-  --sun-x: calc(100% + 180px); /* Sun center reference */
-}
-
 .sun {
   position: absolute;
-  left: var(--sun-x);
+  right: -180px;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  background: radial-gradient(circle, #fff7c2, #ffb300, #ff6f00);
+  background:
+    radial-gradient(circle at 30% 30%, #fff7c2, #ffb300, #ff6f00);
   box-shadow: 0 0 160px rgba(255,170,0,0.9);
+  z-index: 5;
 }
 
 
