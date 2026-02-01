@@ -151,20 +151,23 @@ strong {
 /* SUN                           */
 /* ============================= */
 
+.solar-visual {
+  position: relative;
+  --sun-x: calc(100% + 180px); /* Sun center reference */
+}
+
 .sun {
   position: absolute;
-  right: -180px;
+  left: var(--sun-x);
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  background:
-    radial-gradient(circle at 30% 30%, #fff7c2, #ffb300, #ff6f00);
+  background: radial-gradient(circle, #fff7c2, #ffb300, #ff6f00);
   box-shadow: 0 0 160px rgba(255,170,0,0.9);
-  z-index: 10000;
-    position: absolute;
 }
+
 
 /* ============================= */
 /* ORBITS                        */
@@ -375,10 +378,53 @@ strong {
   height: 860px;
 }
 .orbit {
-  border-style: dashed;
-  border-width: 1.4px;
-  border-color: rgba(255,255,255,0.55);
-  filter: drop-shadow(0 0 4px rgba(255,255,255,0.2));
+  position: absolute;
+  left: var(--sun-x);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1.5px dashed rgba(255,255,255,0.6);
+  pointer-events: none;
 }
+.mercury {
+  left: calc(var(--sun-x) - 130px);
+  top: calc(50% - 80px);
+}
+
+.venus {
+  left: calc(var(--sun-x) - 170px);
+  top: calc(50% + 110px);
+}
+
+.earth {
+  left: calc(var(--sun-x) - 210px);
+  top: calc(50% - 160px);
+}
+
+.mars {
+  left: calc(var(--sun-x) - 250px);
+  top: calc(50% + 190px);
+}
+
+.jupiter {
+  left: calc(var(--sun-x) - 350px);
+  top: calc(50% - 260px);
+}
+
+.saturn {
+  left: calc(var(--sun-x) - 410px);
+  top: calc(50% + 300px);
+}
+
+.uranus {
+  left: calc(var(--sun-x) - 480px);
+  top: calc(50% - 360px);
+}
+
+.neptune {
+  left: calc(var(--sun-x) - 550px);
+  top: calc(50% + 420px);
+}
+
 
 
