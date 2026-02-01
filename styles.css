@@ -377,12 +377,4 @@ strong {
   width: 1100px;
   height: 860px;
 }
-.orbit {
-  position: absolute;
-  left: var(--sun-x);
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  border: 1.5px dashed rgba(255,255,255,0.6);
-  pointer-events: none;
-}
+
