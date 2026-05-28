@@ -111,178 +111,152 @@ strong {
      
 }
 
+```css
 /* ============================= */
-/* ORBITAL SOLAR SYSTEM LAYOUT   */
-/* ============================= */
-
-.solar-layout {
-  display: flex;
-  min-height: 100vh;
-  padding: 80px;
-  gap: 40px;
-}
-
-.solar-text {
-  flex: 1.2;
-}
-
-/* ============================= */
-/* RIGHT SIDE VISUAL             */
+/* CLEAN SOLAR SYSTEM RESET */
 /* ============================= */
 
-.solar-visual {
-  flex: 1.3;
+.solar-diagram {
   position: relative;
+  width: 700px;
+  height: 900px;
+  margin: auto;
   overflow: visible;
-    <div class="orbit o1"></div>
-<div class="orbit o2"></div>
-<div class="orbit o3"></div>
-<div class="orbit o4"></div>
-
-
-  /* CRITICAL FIX */
-  background: transparent !important;
-  isolation: isolate;
-  z-index: 1;
 }
 
-
-
-/* ============================= */
-/* SUN                           */
-/* ============================= */
-
+/* SUN */
 .sun {
   position: absolute;
-  right: -180px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffe27a, #ff9800, #ff5e00);
+  right: -130px;
   top: 50%;
   transform: translateY(-50%);
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 30% 30%, #fff7c2, #ffb300, #ff6f00);
-  box-shadow: 0 0 160px rgba(255,170,0,0.9);
-  z-index: 5;
+  box-shadow: 0 0 120px rgba(255,180,0,0.8);
+  z-index: 10;
 }
 
+/* ORBITS */
+.orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(255,255,255,0.35);
+  top: 50%;
+  right: -130px;
+  transform: translate(50%, -50%);
+}
 
+/* Orbit sizes */
+.orbit1 { width: 180px; height: 140px; }
+.orbit2 { width: 260px; height: 200px; }
+.orbit3 { width: 340px; height: 260px; }
+.orbit4 { width: 430px; height: 320px; }
+.orbit5 { width: 560px; height: 420px; }
+.orbit6 { width: 700px; height: 520px; }
+.orbit7 { width: 840px; height: 640px; }
+.orbit8 { width: 980px; height: 760px; }
 
-
-
-/* ============================= */
-/* PLANET BASE                   */
-/* ============================= */
-
+/* PLANETS */
 .planet {
   position: absolute;
   border-radius: 50%;
-  background-blend-mode: overlay, multiply, normal;
+  z-index: 20;
   box-shadow:
-    inset -10px -10px 18px rgba(0,0,0,0.75),
-    inset 6px 6px 12px rgba(255,255,255,0.08),
-    0 0 28px rgba(0,0,0,0.65);
+    inset -6px -6px 12px rgba(0,0,0,0.6),
+    0 0 20px rgba(0,0,0,0.5);
 }
 
-/* ============================= */
-/* INNER PLANETS                 */
-/* ============================= */
-
+/* MERCURY */
 .mercury {
-  background:
-    radial-gradient(circle at 30% 30%, #d6d6d6 0%, #7a7a7a 65%),
-    repeating-radial-gradient(circle,
-      rgba(0,0,0,0.15) 0px,
-      rgba(0,0,0,0.15) 2px,
-      transparent 2px,
-      transparent 5px
-    );
+  width: 18px;
+  height: 18px;
+  right: 85px;
+  top: 43%;
+  background: radial-gradient(circle, #cfcfcf, #777);
 }
 
-
-
+/* VENUS */
 .venus {
-  background:
-    radial-gradient(circle at 30% 30%, #ffd8a8 0%, #b87333 70%),
-    repeating-linear-gradient(
-      20deg,
-      rgba(255,255,255,0.12),
-      rgba(255,255,255,0.12) 6px,
-      transparent 6px,
-      transparent 14px
-    );
+  width: 28px;
+  height: 28px;
+  right: 130px;
+  top: 60%;
+  background: radial-gradient(circle, #ffd59a, #a86b2d);
 }
 
+/* EARTH */
 .earth {
+  width: 34px;
+  height: 34px;
+  right: 190px;
+  top: 36%;
   background:
-    radial-gradient(circle at 30% 30%, #9ee7ff 0%, #1e90ff 45%, #0b3d91 75%),
-    radial-gradient(circle at 55% 55%, rgba(34,197,94,0.8) 0%, transparent 40%),
-    radial-gradient(circle at 70% 60%, rgba(34,197,94,0.6) 0%, transparent 35%);
+    radial-gradient(circle at 30% 30%, #9be7ff, #0066cc 65%),
+    radial-gradient(circle at 60% 55%, rgba(34,197,94,0.9) 0%, transparent 40%);
 }
 
-
+/* MARS */
 .mars {
-  background:
-    radial-gradient(circle at 30% 30%, #ff9b6a 0%, #7a1c0c 70%),
-    repeating-radial-gradient(circle,
-      rgba(0,0,0,0.18) 0px,
-      rgba(0,0,0,0.18) 2px,
-      transparent 2px,
-      transparent 6px
-    );
-}
-.planet {
-  background-blend-mode: overlay, multiply, normal;
+  width: 24px;
+  height: 24px;
+  right: 250px;
+  top: 67%;
+  background: radial-gradient(circle, #ff9f6a, #7a1c0c);
 }
 
-
-
-/* ============================= */
-/* GAS GIANTS                    */
-/* ============================= */
-
+/* JUPITER */
 .jupiter {
+  width: 70px;
+  height: 70px;
+  right: 320px;
+  top: 34%;
   background:
-    radial-gradient(circle at 30% 30%, #ffd7a3 0%, #c58b59 45%, #7a4a24 80%),
     repeating-linear-gradient(
       0deg,
-      rgba(255,255,255,0.18) 0 8px,
-      rgba(0,0,0,0.12) 8px 16px
+      #d8a06d 0 10px,
+      #a86f3c 10px 20px
     );
 }
 
-
+/* SATURN */
 .saturn {
-  background:
-    radial-gradient(circle at 30% 30%, #fff2cc 0%, #d6b47c 50%, #9e7f47 80%),
-    repeating-linear-gradient(
-      0deg,
-      rgba(255,255,255,0.12),
-      rgba(255,255,255,0.12) 6px,
-      transparent 6px,
-      transparent 14px
-    );
+  width: 60px;
+  height: 60px;
+  right: 420px;
+  top: 70%;
+  background: radial-gradient(circle, #f2d29b, #9e7f47);
 }
 
+.saturn::after {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 30px;
+  border: 2px solid rgba(220,200,160,0.6);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+}
 
-/* ============================= */
-/* ICE GIANTS                    */
-/* ============================= */
-
+/* URANUS */
 .uranus {
-  background:
-    radial-gradient(circle at 30% 30%, #d6ffff 0%, #7fdde0 50%, #3a8ca1 80%);
+  width: 44px;
+  height: 44px;
+  right: 520px;
+  top: 30%;
+  background: radial-gradient(circle, #cfffff, #4ca1af);
 }
 
-
+/* NEPTUNE */
 .neptune {
-  background:
-    radial-gradient(circle at 30% 30%, #8ab4ff 0%, #304ffe 45%, #0b1a4a 80%),
-    repeating-linear-gradient(
-      -20deg,
-      rgba(255,255,255,0.08),
-      rgba(255,255,255,0.08) 6px,
-      transparent 6px,
-      transparent 14px
-    );
+  width: 42px;
+  height: 42px;
+  right: 620px;
+  top: 76%;
+  background: radial-gradient(circle, #6ea8ff, #182848);
 }
+```
+
