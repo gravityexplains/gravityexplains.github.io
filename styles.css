@@ -286,18 +286,3 @@ strong {
       transparent 14px
     );
 }
-.planet {
-  background-color: gray !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-.solar-diagram {
-  position: relative;
-  min-height: 900px;
-  width: 100%;
-}
-
-.planet {
-  background: white !important;
-}
