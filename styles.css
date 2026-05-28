@@ -292,4 +292,12 @@ strong {
   visibility: visible !important;
 }
 
+.solar-diagram {
+  position: relative;
+  min-height: 900px;
+  width: 100%;
+}
 
+.planet {
+  background: white !important;
+}
