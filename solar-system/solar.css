@@ -62,69 +62,488 @@
     font-size: 0.9rem;
     opacity: 0.6;
 }
-/* ============================= */
-/* SOLAR SYSTEM DIAGRAM LAYOUT   */
-/* ============================= */
+
+/* =====================================================
+   SOLAR SYSTEM PAGE
+   ===================================================== */
+
+/* MAIN LAYOUT */
 
 .solar-layout {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+
+    width: 100%;
+    padding: 45px 55px;
+    box-sizing: border-box;
 }
+
+/* LEFT TEXT SECTION */
 
 .solar-text {
-  width: 60%;
+    flex: 0 0 43%;
+    min-width: 0;
+    padding-left: 10px;
 }
 
-/* Diagram container */
+.solar-text h1 {
+    color: #00d9ef;
+    font-size: clamp(25px, 2.5vw, 38px);
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.solar-text h2 {
+    color: #70e4ff;
+    margin-top: 25px;
+}
+
+.solar-text p,
+.solar-text li {
+    color: white;
+    line-height: 1.8;
+}
+
+.solar-text strong {
+    color: #00d9ef;
+}
+
+.solar-text ul {
+    padding-left: 25px;
+}
+
+.solar-text .project-link {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+
+/* =====================================================
+   SOLAR SYSTEM DIAGRAM
+   ===================================================== */
+
 .solar-diagram {
-  width: 40%;
-  position: relative;
-  height: 500px;
+    flex: 1;
+    min-width: 0;
+    height: 650px;
+
+    position: relative;
+    overflow: hidden;
+
+    isolation: isolate;
 }
 
-/* Sun */
-.sun {
-  width: 80px;
-  height: 80px;
-  background: radial-gradient(circle, #ffd700, #ff8c00);
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  box-shadow: 0 0 40px rgba(255, 200, 0, 0.8);
+
+/* =====================================================
+   SUN
+   ===================================================== */
+
+.solar-diagram .sun {
+    position: absolute;
+
+    width: 115px;
+    height: 115px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #fffbd0 0%,
+            #fff176 20%,
+            #ffbd00 55%,
+            #ff7900 85%,
+            #e84b00 100%
+        );
+
+    box-shadow:
+        0 0 30px rgba(255, 190, 0, 0.8),
+        0 0 75px rgba(255, 160, 0, 0.5),
+        0 0 130px rgba(255, 130, 0, 0.25);
+
+    z-index: 5;
 }
 
-/* Planets */
-.planet {
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+
+/* =====================================================
+   ORBITAL PATHS
+   All orbits share the Sun's centre.
+   ===================================================== */
+
+.solar-diagram .orbit {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border: 1.5px dashed rgba(255, 255, 255, 0.65);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 1;
 }
 
-/* Individual planets */
-.mercury { width: 8px; height: 8px; background: gray; left: 120px; }
-.venus   { width: 14px; height: 14px; background: #d4af37; left: 150px; }
-.earth   { width: 14px; height: 14px; background: #1e90ff; left: 180px; }
-.mars    { width: 10px; height: 10px; background: #c1440e; left: 210px; }
+/* Individual elliptical orbits */
 
-.jupiter { width: 30px; height: 30px; background: #d2b48c; left: 260px; }
-.saturn  { width: 26px; height: 26px; background: #deb887; left: 320px; }
-.uranus  { width: 20px; height: 20px; background: #7fffd4; left: 370px; }
-.neptune { width: 20px; height: 20px; background: #4169e1; left: 420px; }
-@media (max-width: 900px) {
-  .solar-layout {
-    flex-direction: column;
-  }
+.solar-diagram .orbit1 {
+    width: 150px;
+    height: 115px;
+}
 
-  .solar-text,
-  .solar-diagram {
-    width: 100%;
-  }
+.solar-diagram .orbit2 {
+    width: 220px;
+    height: 165px;
+}
 
-  .solar-diagram {
-    height: 300px;
-  }
+.solar-diagram .orbit3 {
+    width: 300px;
+    height: 225px;
+}
+
+.solar-diagram .orbit4 {
+    width: 380px;
+    height: 290px;
+}
+
+.solar-diagram .orbit5 {
+    width: 470px;
+    height: 360px;
+}
+
+.solar-diagram .orbit6 {
+    width: 550px;
+    height: 425px;
+}
+
+.solar-diagram .orbit7 {
+    width: 630px;
+    height: 490px;
+}
+
+.solar-diagram .orbit8 {
+    width: 710px;
+    height: 555px;
+}
+
+
+/* =====================================================
+   PLANET BASE
+   ===================================================== */
+
+.solar-diagram .planet {
+    position: absolute;
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+
+    overflow: visible;
+
+    z-index: 10;
+
+    box-shadow:
+        inset -7px -7px 12px rgba(0, 0, 0, 0.55),
+        inset 3px 3px 8px rgba(255, 255, 255, 0.25),
+        0 0 15px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =====================================================
+   MERCURY
+   ===================================================== */
+
+.solar-diagram .mercury {
+    width: 20px;
+    height: 20px;
+
+    left: calc(50% + 75px);
+    top: 50%;
+
+    background:
+        radial-gradient(circle at 30% 30%, #dedede, #929292 55%, #454545);
+
+}
+
+
+/* =====================================================
+   VENUS
+   ===================================================== */
+
+.solar-diagram .venus {
+    width: 30px;
+    height: 30px;
+
+    left: calc(50% + 65px);
+    top: calc(50% + 45px);
+
+    background:
+        repeating-linear-gradient(
+            165deg,
+            #f6d49a 0px,
+            #e4b86d 5px,
+            #b98240 9px,
+            #edc486 13px
+        );
+
+}
+
+
+/* =====================================================
+   EARTH
+   ===================================================== */
+
+.solar-diagram .earth {
+    width: 43px;
+    height: 43px;
+
+    left: calc(50% - 106px);
+    top: calc(50% - 66px);
+
+    background:
+        radial-gradient(
+            ellipse at 30% 30%,
+            #8ce9ff 0%,
+            #168be4 30%,
+            #0751a9 65%,
+            #032c67 100%
+        );
+
+    box-shadow:
+        inset -8px -7px 12px rgba(0, 0, 0, 0.6),
+        0 0 15px rgba(40, 140, 255, 0.35);
+}
+
+/* Earth continents */
+
+.solar-diagram .earth::before {
+    content: "";
+
+    position: absolute;
+
+    width: 43%;
+    height: 34%;
+
+    top: 17%;
+    left: 18%;
+
+    background: #48bb61;
+
+    border-radius: 50% 35% 60% 30%;
+
+    transform: rotate(-25deg);
+
+    box-shadow:
+        9px 12px 0 -4px #36a64f,
+        13px -2px 0 -5px #71c96a;
+}
+
+.solar-diagram .earth::after {
+    content: "";
+
+    position: absolute;
+
+    width: 20%;
+    height: 14%;
+
+    top: 58%;
+    left: 55%;
+
+    background: #65c66d;
+
+    border-radius: 50%;
+
+    transform: rotate(25deg);
+}
+
+
+/* =====================================================
+   MARS
+   ===================================================== */
+
+.solar-diagram .mars {
+    width: 29px;
+    height: 29px;
+
+    left: calc(50% - 111px);
+    top: calc(50% + 108px);
+
+    background:
+        radial-gradient(
+            circle at 30% 30%,
+            #ffab78,
+            #d65b36 45%,
+            #842a1c 100%
+        );
+}
+
+
+/* =====================================================
+   JUPITER
+   ===================================================== */
+
+.solar-diagram .jupiter {
+    width: 76px;
+    height: 76px;
+
+    left: calc(50% + 175px);
+    top: calc(50% - 150px);
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            #e8c18f 0px,
+            #c9915e 9px,
+            #a86d42 16px,
+            #e2b681 23px,
+            #f0d2a7 30px
+        );
+
+    box-shadow:
+        inset -12px -10px 17px rgba(0, 0, 0, 0.55),
+        0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =====================================================
+   SATURN
+   ===================================================== */
+
+.solar-diagram .saturn {
+    width: 68px;
+    height: 68px;
+
+    left: calc(50% + 35px);
+    top: calc(50% + 180px);
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            #f3d49c 0px,
+            #c5a06c 8px,
+            #e8c58d 15px,
+            #aa865a 22px
+        );
+
+    z-index: 12;
+}
+
+/* Saturn rings */
+
+.solar-diagram .saturn::after {
+    content: "";
+
+    position: absolute;
+
+    width: 145px;
+    height: 42px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%) rotate(-18deg);
+
+    border-radius: 50%;
+
+    border: 5px solid rgba(220, 198, 150, 0.75);
+
+    box-shadow:
+        0 0 5px rgba(255, 230, 180, 0.3);
+
+    z-index: -1;
+}
+
+
+/* =====================================================
+   URANUS
+   ===================================================== */
+
+.solar-diagram .uranus {
+    width: 48px;
+    height: 48px;
+
+    left: calc(50% - 190px);
+    top: calc(50% - 195px);
+
+    background:
+        radial-gradient(
+            circle at 30% 30%,
+            #d3ffff,
+            #82e0e5 45%,
+            #388d9d 100%
+        );
+}
+
+
+/* =====================================================
+   NEPTUNE
+   ===================================================== */
+
+.solar-diagram .neptune {
+    width: 46px;
+    height: 46px;
+
+    left: calc(50% - 315px);
+    top: calc(50% + 100px);
+
+    background:
+        radial-gradient(
+            circle at 30% 30%,
+            #83baff,
+            #2458bd 50%,
+            #101f64 100%
+        );
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+    .solar-layout {
+        gap: 15px;
+        padding: 30px 20px;
+    }
+
+    .solar-text {
+        flex: 0 0 40%;
+    }
+
+    .solar-diagram {
+        height: 550px;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .solar-layout {
+        flex-direction: column;
+        padding: 25px 18px;
+    }
+
+    .solar-text {
+        width: 100%;
+        flex: none;
+        padding-left: 0;
+    }
+
+    .solar-diagram {
+        width: 100%;
+        flex: none;
+        height: 520px;
+    }
+
 }
